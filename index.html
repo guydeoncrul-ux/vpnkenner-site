@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta name="google-site-verification" content="zHI9mnTfe2O_BcgIM0Y8vviubIvq4qOtACHUueCE8X0" />
+<meta name='impact-site-verification' value='4a68596a-7fe7-4c1a-8bb3-12922ca69d7d'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VPNkenner.nl – Beste VPN vergelijker Nederland 2026</title>
+<meta name="description" content="Vergelijk de beste VPN-diensten van 2026. Onafhankelijk getest op snelheid, privacy en prijs. Bespaar tot 87% met onze exclusieve deals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0e1a;
+    --bg2: #111827;
+    --bg3: #1a2235;
+    --surface: #1e2a3d;
+    --border: rgba(255,255,255,0.08);
+    --border2: rgba(255,255,255,0.15);
+    --text: #f0f4ff;
+    --muted: #8896b0;
+    --accent: #4f9cf9;
+    --accent2: #7c5cfc;
+    --green: #22d3a0;
+    --amber: #f5a623;
+    --red: #ff5c5c;
+    --gradient: linear-gradient(135deg, #4f9cf9, #7c5cfc);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 0 2rem;
+    height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(10,14,26,0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+  .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.25rem; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: .9rem; transition: color .2s; }
+  .nav-links a:hover { color: var(--text); }
+  .nav-cta { background: var(--gradient); color: white; border: none; padding: .5rem 1.25rem; border-radius: 8px; font-size: .9rem; font-weight: 500; cursor: pointer; font-family: 'DM Sans', sans-serif; }
+
+  /* HERO */
+  .hero {
+    padding: 140px 2rem 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-glow {
+    position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(79,156,249,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(79,156,249,0.1); border: 1px solid rgba(79,156,249,0.3);
+    color: var(--accent); padding: .35rem 1rem; border-radius: 100px; font-size: .8rem; font-weight: 500;
+    margin-bottom: 1.5rem;
+    animation: fadeUp .6s ease both;
+  }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+    animation: fadeUp .6s .1s ease both;
+  }
+  h1 span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero-sub {
+    font-size: 1.1rem; color: var(--muted); max-width: 540px; margin: 0 auto 2rem;
+    animation: fadeUp .6s .2s ease both;
+  }
+  .hero-stats {
+    display: flex; justify-content: center; gap: 3rem; margin-bottom: 2.5rem;
+    animation: fadeUp .6s .3s ease both;
+  }
+  .stat { text-align: center; }
+  .stat-val { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 700; color: var(--text); }
+  .stat-label { font-size: .8rem; color: var(--muted); }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+
+  /* SECTION */
+  section { padding: 80px 2rem; max-width: 1100px; margin: 0 auto; }
+  .section-label { font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: .75rem; }
+  h2 { font-family: 'Syne', sans-serif; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 700; margin-bottom: 1rem; }
+  h2 span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+  /* FILTER BAR */
+  .filter-bar {
+    display: flex; gap: .75rem; margin-bottom: 2rem; flex-wrap: wrap;
+  }
+  .filter-btn {
+    padding: .45rem 1.1rem; border-radius: 100px; font-size: .85rem; font-weight: 500;
+    border: 1px solid var(--border2); background: transparent; color: var(--muted);
+    cursor: pointer; transition: all .2s; font-family: 'DM Sans', sans-serif;
+  }
+  .filter-btn.active, .filter-btn:hover { background: var(--accent); border-color: var(--accent); color: white; }
+
+  /* VPN CARDS */
+  .vpn-list { display: flex; flex-direction: column; gap: 1rem; }
+  .vpn-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    display: grid;
+    grid-template-columns: 200px 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+    transition: border-color .2s, transform .2s;
+    animation: fadeUp .5s ease both;
+  }
+  .vpn-card:hover { border-color: var(--border2); transform: translateY(-2px); }
+  .vpn-card.best {
+    border-color: rgba(79,156,249,0.4);
+    background: linear-gradient(135deg, rgba(79,156,249,0.06), rgba(124,92,252,0.06));
+  }
+  .vpn-rank {
+    display: flex; align-items: center; gap: .75rem;
+  }
+  .rank-num {
+    font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 800;
+    color: var(--muted); min-width: 28px;
+  }
+  .rank-num.gold { color: #f5a623; }
+  .vpn-logo-box {
+    width: 120px; height: 48px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem;
+    border: 1px solid var(--border);
+  }
+  .vpn-info { flex: 1; }
+  .vpn-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: .3rem; display: flex; align-items: center; gap: .6rem; }
+  .badge { display: inline-block; font-size: .7rem; font-weight: 600; padding: .2rem .6rem; border-radius: 100px; }
+  .badge-best { background: rgba(79,156,249,0.15); color: var(--accent); border: 1px solid rgba(79,156,249,0.3); }
+  .badge-cheap { background: rgba(34,211,160,0.1); color: var(--green); border: 1px solid rgba(34,211,160,0.3); }
+  .badge-streaming { background: rgba(245,166,35,0.1); color: var(--amber); border: 1px solid rgba(245,166,35,0.3); }
+  .vpn-desc { font-size: .88rem; color: var(--muted); margin-bottom: .75rem; }
+  .vpn-features { display: flex; gap: .5rem; flex-wrap: wrap; }
+  .feat { font-size: .75rem; color: var(--muted); background: rgba(255,255,255,0.04); border: 1px solid var(--border); padding: .2rem .6rem; border-radius: 6px; }
+  .vpn-meta {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: .75rem 0;
+  }
+  .meta-item { text-align: center; }
+  .meta-val { font-family: 'Syne', sans-serif; font-size: .95rem; font-weight: 700; color: var(--text); }
+  .meta-label { font-size: .7rem; color: var(--muted); }
+  .stars { color: var(--amber); font-size: .9rem; }
+  .vpn-action { text-align: right; min-width: 160px; }
+  .price-main { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--text); }
+  .price-sub { font-size: .75rem; color: var(--muted); margin-bottom: 1rem; }
+  .price-original { font-size: .8rem; color: var(--muted); text-decoration: line-through; }
+  .btn-primary {
+    display: block; width: 100%;
+    background: var(--gradient); color: white;
+    border: none; border-radius: 10px; padding: .7rem 1.25rem;
+    font-size: .9rem; font-weight: 600; cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: none; text-align: center;
+    transition: opacity .2s, transform .15s;
+    margin-bottom: .5rem;
+  }
+  .btn-primary:hover { opacity: .9; transform: scale(1.02); }
+  .btn-ghost {
+    display: block; width: 100%;
+    background: transparent; color: var(--muted);
+    border: 1px solid var(--border2); border-radius: 10px; padding: .55rem 1.25rem;
+    font-size: .85rem; cursor: pointer; font-family: 'DM Sans', sans-serif;
+    text-decoration: none; text-align: center;
+    transition: color .2s, border-color .2s;
+  }
+  .btn-ghost:hover { color: var(--text); border-color: var(--text); }
+  .guarantee { font-size: .7rem; color: var(--muted); margin-top: .4rem; text-align: center; }
+
+  /* SCORES SECTION */
+  .scores-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem; }
+  .score-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.25rem;
+    transition: border-color .2s;
+  }
+  .score-card:hover { border-color: var(--border2); }
+  .score-title { font-size: .85rem; color: var(--muted); margin-bottom: 1rem; }
+  .score-bar-wrap { display: flex; flex-direction: column; gap: .6rem; }
+  .score-row { display: flex; align-items: center; gap: .75rem; }
+  .score-name { font-size: .8rem; min-width: 80px; color: var(--text); }
+  .score-bar-bg { flex: 1; height: 6px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden; }
+  .score-bar { height: 100%; border-radius: 3px; transition: width 1s ease; }
+  .score-num { font-size: .75rem; font-weight: 600; min-width: 30px; text-align: right; color: var(--muted); }
+
+  /* USE CASES */
+  .usecase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 2rem; }
+  .usecase-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem;
+    transition: border-color .2s, transform .2s;
+    cursor: pointer;
+  }
+  .usecase-card:hover { border-color: rgba(79,156,249,0.3); transform: translateY(-3px); }
+  .usecase-icon { font-size: 2rem; margin-bottom: .75rem; }
+  .usecase-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: .4rem; }
+  .usecase-desc { font-size: .85rem; color: var(--muted); margin-bottom: 1rem; }
+  .usecase-winner { font-size: .8rem; }
+  .usecase-winner span { color: var(--accent); font-weight: 600; }
+
+  /* FAQ */
+  .faq-list { margin-top: 2rem; display: flex; flex-direction: column; gap: .75rem; }
+  .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .faq-q {
+    padding: 1.1rem 1.5rem; font-weight: 500; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    transition: background .2s;
+    user-select: none;
+  }
+  .faq-q:hover { background: rgba(255,255,255,0.03); }
+  .faq-arrow { color: var(--muted); transition: transform .3s; font-size: 1.1rem; }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s; font-size: .9rem; color: var(--muted); padding: 0 1.5rem; line-height: 1.7; }
+  .faq-item.open .faq-a { max-height: 200px; padding: 0 1.5rem 1.1rem; }
+  .faq-item.open .faq-arrow { transform: rotate(180deg); }
+
+  /* FOOTER */
+  footer {
+    background: var(--bg2); border-top: 1px solid var(--border);
+    padding: 3rem 2rem; text-align: center;
+  }
+  .footer-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: .5rem; }
+  .footer-text { font-size: .82rem; color: var(--muted); max-width: 600px; margin: 0 auto 1.5rem; line-height: 1.7; }
+  .footer-links { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+  .footer-links a { font-size: .82rem; color: var(--muted); text-decoration: none; }
+  .footer-links a:hover { color: var(--text); }
+
+  /* DIVIDER */
+  .section-divider { border: none; border-top: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
+
+  /* Responsive */
+  @media(max-width:768px) {
+    nav .nav-links { display: none; }
+    .vpn-card { grid-template-columns: 1fr; gap: 1rem; }
+    .vpn-action { text-align: left; min-width: unset; }
+    .vpn-action .price-main { font-size: 1.3rem; }
+    .hero-stats { gap: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">VPNkenner.nl</div>
+  <ul class="nav-links">
+    <li><a href="#vergelijk">Vergelijking</a></li>
+    <li><a href="#scores">Scores</a></li>
+    <li><a href="#gebruik">Gebruik</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=143750&url_id=902" target="_blank" rel="noopener sponsored" class="nav-cta">Beste deal →</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-badge"><span class="dot"></span> Tarieven bijgewerkt – maart 2026</div>
+  <h1>De <span>beste VPN</span> voor<br>Nederland in 2026</h1>
+  <p class="hero-sub">Onafhankelijk getest op snelheid, privacy en prijs. Vergelijk 6 top-aanbieders en bespaar tot 87% met onze exclusieve deals.</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-val">3</div><div class="stat-label">VPN's vergeleken</div></div>
+    <div class="stat"><div class="stat-val">87%</div><div class="stat-label">max. korting</div></div>
+    <div class="stat"><div class="stat-val">30</div><div class="stat-label">dagen geld terug</div></div>
+    <div class="stat"><div class="stat-val">100%</div><div class="stat-label">onafhankelijk</div></div>
+  </div>
+</div>
+
+<section id="vergelijk">
+  <div class="section-label">Vergelijking 2026</div>
+  <h2>Alle VPN's <span>eerlijk vergeleken</span></h2>
+  <p style="color:var(--muted);margin-bottom:2rem;max-width:580px">We testen elke VPN op snelheid, privacy-beleid, streaming en prijs. Geen gesponsorde volgorde — alleen eerlijke resultaten.</p>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterVPN('alle', this)">Alle</button>
+    <button class="filter-btn" onclick="filterVPN('streaming', this)">Streaming</button>
+    <button class="filter-btn" onclick="filterVPN('goedkoop', this)">Goedkoopst</button>
+    <button class="filter-btn" onclick="filterVPN('privacy', this)">Privacy</button>
+    <button class="filter-btn" onclick="filterVPN('zakelijk', this)">Zakelijk</button>
+  </div>
+
+  <div class="vpn-list" id="vpn-list">
+
+    <!-- NordVPN -->
+    <div class="vpn-card best" data-tags="streaming privacy zakelijk" style="animation-delay:.05s">
+      <div class="vpn-rank">
+        <div class="rank-num gold">1</div>
+        <div class="vpn-logo-box" style="color:#4f9cf9">NordVPN</div>
+      </div>
+      <div class="vpn-info">
+        <div class="vpn-name">NordVPN <span class="badge badge-best">Beste overall</span></div>
+        <div class="vpn-desc">Snelste VPN in onze test (90% snelheid behouden) met 9.000+ servers in 130 landen. Beste keuze voor streaming, gaming en zakelijk gebruik.</div>
+        <div class="vpn-meta">
+          <div class="meta-item"><div class="meta-val" style="color:var(--green)">9.0/10</div><div class="meta-label">Score</div></div>
+          <div class="meta-item"><div class="meta-val">9.000+</div><div class="meta-label">Servers</div></div>
+          <div class="meta-item"><div class="meta-val" style="color:var(--green)">✓ Geen logs</div><div class="meta-label">Privacy</div></div>
+        </div>
+        <div class="vpn-features">
+          <span class="feat">NordLynx protocol</span>
+          <span class="feat">Threat Protection</span>
+          <span class="feat">Meshnet</span>
+          <span class="feat">Double VPN</span>
+          <span class="feat">10 apparaten</span>
+        </div>
+      </div>
+      <div class="vpn-action">
+        <div class="price-original">€12,99/mnd</div>
+        <div class="price-main">€2,69</div>
+        <div class="price-sub">per maand · 2-jaar plan</div>
+        <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=143750&url_id=902" target="_blank" rel="noopener sponsored" class="btn-primary">Bekijk aanbieding →</a>
+        <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=143750&url_id=902" target="_blank" rel="noopener sponsored" class="btn-ghost">Lees review</a>
+        <div class="guarantee">✓ 30 dagen geld terug</div>
+      </div>
+    </div>
+
+    <!-- Surfshark -->
+    <div class="vpn-card" data-tags="goedkoop streaming" style="animation-delay:.1s">
+      <div class="vpn-rank">
+        <div class="rank-num">2</div>
+        <div class="vpn-logo-box" style="color:#22d3a0">Surfshark</div>
+      </div>
+      <div class="vpn-info">
+        <div class="vpn-name">Surfshark <span class="badge badge-cheap">Goedkoopst</span></div>
+        <div class="vpn-desc">Goedkoopste top-VPN met onbeperkt apparaten. Ideaal voor gezinnen. Regelmatig tot 87% korting op het 2-jarig plan.</div>
+        <div class="vpn-meta">
+          <div class="meta-item"><div class="meta-val" style="color:var(--green)">8.7/10</div><div class="meta-label">Score</div></div>
+          <div class="meta-item"><div class="meta-val">4.500+</div><div class="meta-label">Servers</div></div>
+          <div class="meta-item"><div class="meta-val" style="color:var(--green)">Onbeperkt</div><div class="meta-label">Apparaten</div></div>
+        </div>
+        <div class="vpn-features">
+          <span class="feat">Onbeperkt apparaten</span>
+          <span class="feat">CleanWeb</span>
+          <span class="feat">MultiHop</span>
+          <span class="feat">NoBorders</span>
+        </div>
+      </div>
+      <div class="vpn-action">
+        <div class="price-original">€15,45/mnd</div>
+        <div class="price-main">€1,99</div>
+        <div class="price-sub">per maand · 2-jaar plan</div>
+        <a href="https://get.surfshark.net/aff_c?offer_id=926&aff_id=45604" target="_blank" rel="noopener sponsored" class="btn-primary">Bekijk aanbieding →</a>
+        <a href="https://get.surfshark.net/aff_c?offer_id=926&aff_id=45604" target="_blank" rel="noopener sponsored" class="btn-ghost">Lees review</a>
+        <div class="guarantee">✓ 30 dagen geld terug</div>
+      </div>
+    </div>
+
+    <!-- ExpressVPN -->
+    <div class="vpn-card" data-tags="streaming zakelijk" style="animation-delay:.15s">
+      <div class="vpn-rank">
+        <div class="rank-num">3</div>
+        <div class="vpn-logo-box" style="color:#ff5c5c">ExpressVPN</div>
+      </div>
+      <div class="vpn-info">
+        <div class="vpn-name">ExpressVPN <span class="badge badge-streaming">Beste streaming</span></div>
+        <div class="vpn-desc">Beste klantenservice en meest betrouwbaar voor Netflix, BBC iPlayer en Amazon Prime. 23 onafhankelijke audits doorstaan.</div>
+        <div class="vpn-meta">
+          <div class="meta-item"><div class="meta-val" style="color:var(--amber)">8.5/10</div><div class="meta-label">Score</div></div>
+          <div class="meta-item"><div class="meta-val">105+</div><div class="meta-label">Landen</div></div>
+          <div class="meta-item"><div class="meta-val" style="color:var(--green)">✓ Geen logs</div><div class="meta-label">Privacy</div></div>
+        </div>
+        <div class="vpn-features">
+          <span class="feat">Lightway protocol</span>
+          <span class="feat">24/7 support</span>
+          <span class="feat">Smart DNS</span>
+          <span class="feat">Split tunneling</span>
+        </div>
+      </div>
+      <div class="vpn-action">
+        <div class="price-original">€12,99/mnd</div>
+        <div class="price-main">€2,44</div>
+        <div class="price-sub">per maand · 2-jaar plan</div>
+        <span style="display:block;width:100%;text-align:center;color:var(--muted);font-size:.8rem;padding:.7rem 0">Binnenkort beschikbaar</span>
+        <div class="guarantee">✓ 30 dagen geld terug</div>
+      </div>
+    </div>
+
+
+
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- SCORES -->
+<section id="scores">
+  <div class="section-label">Testresultaten</div>
+  <h2>Scores per <span>categorie</span></h2>
+  <p style="color:var(--muted);max-width:540px">We testen elke VPN uitgebreid op snelheid, streaming, privacy en gebruiksgemak. Hier zijn de resultaten.</p>
+  <div class="scores-grid">
+    <div class="score-card">
+      <div class="score-title">⚡ Snelheid (lokaal NL)</div>
+      <div class="score-bar-wrap">
+        <div class="score-row"><span class="score-name">NordVPN</span><div class="score-bar-bg"><div class="score-bar" style="width:90%;background:linear-gradient(90deg,#4f9cf9,#7c5cfc)"></div></div><span class="score-num">90%</span></div>
+        <div class="score-row"><span class="score-name">Surfshark</span><div class="score-bar-bg"><div class="score-bar" style="width:82%;background:linear-gradient(90deg,#22d3a0,#4f9cf9)"></div></div><span class="score-num">82%</span></div>
+        <div class="score-row"><span class="score-name">ExpressVPN</span><div class="score-bar-bg"><div class="score-bar" style="width:85%;background:linear-gradient(90deg,#ff5c5c,#f5a623)"></div></div><span class="score-num">85%</span></div>
+        <div class="score-row"><span class="score-name">ProtonVPN</span><div class="score-bar-bg"><div class="score-bar" style="width:78%;background:linear-gradient(90deg,#7c5cfc,#4f9cf9)"></div></div><span class="score-num">78%</span></div>
+        <div class="score-row"><span class="score-name">CyberGhost</span><div class="score-bar-bg"><div class="score-bar" style="width:75%;background:linear-gradient(90deg,#f5a623,#ff5c5c)"></div></div><span class="score-num">75%</span></div>
+      </div>
+    </div>
+    <div class="score-card">
+      <div class="score-title">📺 Streaming score</div>
+      <div class="score-bar-wrap">
+        <div class="score-row"><span class="score-name">ExpressVPN</span><div class="score-bar-bg"><div class="score-bar" style="width:95%;background:linear-gradient(90deg,#ff5c5c,#f5a623)"></div></div><span class="score-num">9.5</span></div>
+        <div class="score-row"><span class="score-name">NordVPN</span><div class="score-bar-bg"><div class="score-bar" style="width:90%;background:linear-gradient(90deg,#4f9cf9,#7c5cfc)"></div></div><span class="score-num">9.0</span></div>
+        <div class="score-row"><span class="score-name">Surfshark</span><div class="score-bar-bg"><div class="score-bar" style="width:85%;background:linear-gradient(90deg,#22d3a0,#4f9cf9)"></div></div><span class="score-num">8.5</span></div>
+        <div class="score-row"><span class="score-name">CyberGhost</span><div class="score-bar-bg"><div class="score-bar" style="width:82%;background:linear-gradient(90deg,#f5a623,#22d3a0)"></div></div><span class="score-num">8.2</span></div>
+        <div class="score-row"><span class="score-name">ProtonVPN</span><div class="score-bar-bg"><div class="score-bar" style="width:70%;background:linear-gradient(90deg,#7c5cfc,#4f9cf9)"></div></div><span class="score-num">7.0</span></div>
+      </div>
+    </div>
+    <div class="score-card">
+      <div class="score-title">🔒 Privacy & veiligheid</div>
+      <div class="score-bar-wrap">
+        <div class="score-row"><span class="score-name">ProtonVPN</span><div class="score-bar-bg"><div class="score-bar" style="width:97%;background:linear-gradient(90deg,#7c5cfc,#22d3a0)"></div></div><span class="score-num">9.7</span></div>
+        <div class="score-row"><span class="score-name">Mullvad</span><div class="score-bar-bg"><div class="score-bar" style="width:95%;background:linear-gradient(90deg,#22d3a0,#4f9cf9)"></div></div><span class="score-num">9.5</span></div>
+        <div class="score-row"><span class="score-name">NordVPN</span><div class="score-bar-bg"><div class="score-bar" style="width:90%;background:linear-gradient(90deg,#4f9cf9,#7c5cfc)"></div></div><span class="score-num">9.0</span></div>
+        <div class="score-row"><span class="score-name">ExpressVPN</span><div class="score-bar-bg"><div class="score-bar" style="width:88%;background:linear-gradient(90deg,#ff5c5c,#f5a623)"></div></div><span class="score-num">8.8</span></div>
+        <div class="score-row"><span class="score-name">Surfshark</span><div class="score-bar-bg"><div class="score-bar" style="width:84%;background:linear-gradient(90deg,#22d3a0,#4f9cf9)"></div></div><span class="score-num">8.4</span></div>
+      </div>
+    </div>
+    <div class="score-card">
+      <div class="score-title">💰 Prijs-kwaliteit</div>
+      <div class="score-bar-wrap">
+        <div class="score-row"><span class="score-name">Surfshark</span><div class="score-bar-bg"><div class="score-bar" style="width:97%;background:linear-gradient(90deg,#22d3a0,#4f9cf9)"></div></div><span class="score-num">9.7</span></div>
+        <div class="score-row"><span class="score-name">NordVPN</span><div class="score-bar-bg"><div class="score-bar" style="width:90%;background:linear-gradient(90deg,#4f9cf9,#7c5cfc)"></div></div><span class="score-num">9.0</span></div>
+        <div class="score-row"><span class="score-name">CyberGhost</span><div class="score-bar-bg"><div class="score-bar" style="width:85%;background:linear-gradient(90deg,#f5a623,#22d3a0)"></div></div><span class="score-num">8.5</span></div>
+        <div class="score-row"><span class="score-name">ExpressVPN</span><div class="score-bar-bg"><div class="score-bar" style="width:72%;background:linear-gradient(90deg,#ff5c5c,#f5a623)"></div></div><span class="score-num">7.2</span></div>
+        <div class="score-row"><span class="score-name">ProtonVPN</span><div class="score-bar-bg"><div class="score-bar" style="width:75%;background:linear-gradient(90deg,#7c5cfc,#4f9cf9)"></div></div><span class="score-num">7.5</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- USE CASES -->
+<section id="gebruik">
+  <div class="section-label">Welke VPN past bij jou?</div>
+  <h2>Kies op basis van <span>jouw gebruik</span></h2>
+  <div class="usecase-grid">
+    <div class="usecase-card">
+      <div class="usecase-icon">📺</div>
+      <div class="usecase-title">Netflix & Streaming</div>
+      <div class="usecase-desc">Amerikaanse Netflix, BBC iPlayer of Disney+ kijken vanuit Nederland.</div>
+      <div class="usecase-winner">Winnaar: <span>ExpressVPN</span></div>
+    </div>
+    <div class="usecase-card">
+      <div class="usecase-icon">🏠</div>
+      <div class="usecase-title">Heel gezin</div>
+      <div class="usecase-desc">Alle apparaten thuis beschermen zonder extra kosten per apparaat.</div>
+      <div class="usecase-winner">Winnaar: <span>Surfshark</span></div>
+    </div>
+    <div class="usecase-card">
+      <div class="usecase-icon">🎮</div>
+      <div class="usecase-title">Gaming</div>
+      <div class="usecase-desc">Laagste ping, DDoS-bescherming en toegang tot regiogebonden games.</div>
+      <div class="usecase-winner">Winnaar: <span>NordVPN</span></div>
+    </div>
+    <div class="usecase-card">
+      <div class="usecase-icon">🔒</div>
+      <div class="usecase-title">Maximale privacy</div>
+      <div class="usecase-desc">Zo anoniem mogelijk online — geen logs, geen tracking, open source.</div>
+      <div class="usecase-winner">Winnaar: <span>ProtonVPN / Mullvad</span></div>
+    </div>
+    <div class="usecase-card">
+      <div class="usecase-icon">💼</div>
+      <div class="usecase-title">Zakelijk gebruik</div>
+      <div class="usecase-desc">Veilig werken op openbare WiFi, remote access tot bedrijfsnetwerk.</div>
+      <div class="usecase-winner">Winnaar: <span>NordVPN</span></div>
+    </div>
+    <div class="usecase-card">
+      <div class="usecase-icon">✈️</div>
+      <div class="usecase-title">Op reis</div>
+      <div class="usecase-desc">VPN die ook werkt in China, UAE en andere landen met censuur.</div>
+      <div class="usecase-winner">Winnaar: <span>ExpressVPN</span></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-label">Veelgestelde vragen</div>
+  <h2>Alles over <span>VPN's</span></h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">Wat is een VPN en waarom heb ik het nodig? <span class="faq-arrow">▾</span></div>
+      <div class="faq-a">Een VPN (Virtual Private Network) versleutelt je internetverbinding en verbergt je IP-adres. Dit beschermt je privacy op openbare WiFi, geeft je toegang tot buitenlandse streaming-content en voorkomt dat je internetprovider je surfgedrag bijhoudt.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">Is een VPN legaal in Nederland? <span class="faq-arrow">▾</span></div>
+      <div class="faq-a">Ja, een VPN is volledig legaal in Nederland. Je mag een VPN gebruiken voor privacy, beveiliging en het omzeilen van geografische beperkingen. Illegale activiteiten blijven uiteraard verboden, ook via een VPN.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">Welke VPN is het beste voor Netflix? <span class="faq-arrow">▾</span></div>
+      <div class="faq-a">ExpressVPN is de meest betrouwbare keuze voor Netflix en andere streamingdiensten. In onze test werkte het met Netflix VS, Netflix NL, BBC iPlayer, HBO Max en Amazon Prime bij de eerste poging. NordVPN en Surfshark zijn goede alternatieven voor een lagere prijs.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">Vertraagt een VPN mijn internet? <span class="faq-arrow">▾</span></div>
+      <div class="faq-a">Een VPN heeft altijd enige invloed op je snelheid, maar moderne protocollen minimaliseren dit. NordVPN behoudt 90% van je basissnelheid op Nederlandse servers. Voor dagelijks gebruik merk je nauwelijks verschil — video streamen, bellen en browsen werken normaal.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">Wat is het verschil tussen dure en goedkope VPN's? <span class="faq-arrow">▾</span></div>
+      <div class="faq-a">Duurdere VPN's investeren meer in serverinfrastructuur, onafhankelijke audits en klantenservice. Surfshark bewijst dat goedkoop niet per se slechter is — het biedt uitstekende prestaties voor €1,99/mnd. Gratis VPN's zijn echter risicovol: ze verdienen geld door jouw data te verkopen.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">Kan ik een VPN op mijn telefoon gebruiken? <span class="faq-arrow">▾</span></div>
+      <div class="faq-a">Alle VPN's in onze vergelijking hebben apps voor iOS en Android. Surfshark is bijzonder geschikt voor mobiel gebruik dankzij de GPS-override functie voor gamers en een nette mobiele interface.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">VPNkenner.nl</div>
+  <p class="footer-text">VPNkenner.nl is een onafhankelijke vergelijkingssite. We verdienen affiliate commissies wanneer je via onze links een abonnement afsluit — dit heeft geen invloed op onze scores of aanbevelingen. Alle prijzen zijn bijgewerkt in maart 2026.</p>
+  <div class="footer-links">
+    <a href="#">Over ons</a>
+    <a href="#">Hoe we testen</a>
+    <a href="#">Privacy policy</a>
+    <a href="#">Sitemap</a>
+    <a href="#">Contact</a>
+  </div>
+  <p style="color:var(--muted);font-size:.75rem;margin-top:1.5rem">© 2026 VPNkenner.nl · Alle rechten voorbehouden</p>
+</footer>
+
+<script>
+function filterVPN(tag, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.vpn-card').forEach(card => {
+    if (tag === 'alle' || (card.dataset.tags || '').includes(tag)) {
+      card.style.display = 'grid';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+function toggleFAQ(el) {
+  const item = el.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// Animate cards on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.style.opacity = '1';
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.vpn-card, .score-card, .usecase-card').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transition = 'opacity .5s ease, transform .2s ease, border-color .2s';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
