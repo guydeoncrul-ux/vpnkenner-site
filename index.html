@@ -550,14 +550,36 @@
   <div class="section-label">Laatste artikelen</div>
   <h2>VPN <span>nieuws & tips</span></h2>
   <p style="color:var(--muted);margin-bottom:2rem;max-width:580px">Onze experts schrijven wekelijks over VPN's, privacy en online beveiliging voor de Nederlandse markt.</p>
-  <div class="news-grid">
-    <a href="/artikel-1.html" class="news-card">
-      <div class="news-label">VPN Tips</div>
-      <div class="news-title">Beste VPN voor Netflix in 2026</div>
-      <div class="news-desc">Welke VPN werkt het beste voor Netflix, Disney+ en andere streamingdiensten vanuit Nederland?</div>
-      <div class="news-footer">Lees artikel →</div>
-    </a>
+  <div class="news-grid" id="news-grid">
+    <div style="color:var(--muted);font-size:.9rem">Artikelen laden...</div>
   </div>
+  <div style="text-align:center;margin-top:2rem">
+    <a href="/blog.html" style="color:var(--accent);text-decoration:none;font-size:.9rem;font-weight:600">Alle artikelen bekijken →</a>
+  </div>
+  <script>
+  (async function() {
+    try {
+      const resp = await fetch('https://api.github.com/repos/guydeoncrul-ux/vpnkenner-site/contents/artikelen');
+      const files = await resp.json();
+      const html = files.filter(f => f.name.endsWith('.html') && f.name.startsWith('vpn-artikel'))
+        .sort((a,b) => b.name.localeCompare(a.name)).slice(0,3);
+      if (!html.length) return;
+      const kaarten = await Promise.all(html.map(async f => {
+        let titel = f.name.replace('vpn-artikel-','').replace('.html','');
+        const dm = f.name.match(/(\d{4})-(\d{2})-(\d{2})/);
+        const datum = dm ? new Date(dm[1]+'-'+dm[2]+'-'+dm[3]).toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'}) : '';
+        try {
+          const r = await fetch('https://raw.githubusercontent.com/guydeoncrul-ux/vpnkenner-site/main/artikelen/'+f.name);
+          const t = await r.text();
+          const m = t.match(/<title>(.*?)\s*\|?\s*VPNkenner\.nl<\/title>/i) || t.match(/<h1[^>]*>(.*?)<\/h1>/i);
+          if (m) titel = m[1].trim();
+        } catch(e){}
+        return '<a href="/artikelen/'+f.name+'" class="news-card"><div class="news-label">'+datum+'</div><div class="news-title">'+titel+'</div><div class="news-footer">Lees artikel →</div></a>';
+      }));
+      document.getElementById('news-grid').innerHTML = kaarten.join('');
+    } catch(e) {}
+  })();
+  </script>
 </section>
 
 <hr class="section-divider">
